@@ -23,10 +23,10 @@ class Automovil {
 public class Main{
     public static void main (String[] args){
         Automovil automovil1 = new Automovil("Toyota", "Supra", "Naranja", 2500);
-        Automovil automovil1 = new Automovil("Toyota", "Honda", "Civic", 1300);
-        Automovil automovil1 = new Automovil("Bugatti", "Chiron", "Morado", 8000);
-        Automovil automovil1 = new Automovil("Suzuki", "Jeep", "Negro", 2000);
-        Automovil automovil1 = new Automovil("Toyota", "Hilux", "Amarillo", 3000);
+        Automovil automovil2 = new Automovil("Toyota", "Honda", "Civic", 1300);
+        Automovil automovil3 = new Automovil("Bugatti", "Chiron", "Morado", 8000);
+        Automovil automovil4 = new Automovil("Suzuki", "Jeep", "Negro", 2000);
+        Automovil automovil5 = new Automovil("Toyota", "Hilux", "Amarillo", 3000);
         
         System.out.println (automovil1.acelerar(13000));
     }
