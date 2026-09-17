@@ -1,0 +1,67 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package parcial;
+
+/**
+ *
+ * @author prestamo
+ */
+public class Empleado {
+    
+   
+    private String nombre;
+    private String cargo;
+    private double salarioBase;
+    private int anosExperiencia;
+    private int anoExperiencia;
+
+    //constructor
+    public Empleado(){
+    }
+
+    public Empleado(String nombre, String cargo, double salarioBase, int anoExperiencia){
+        this.nombre = nombre;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.anosExperiencia = anoExperiencia;
+    }
+    
+    public String getNombre() {
+        return nombre;
+    }
+    public String getCargo() {
+        return cargo;
+    }
+    public double getsalarioBase() {
+        return salarioBase;
+    }
+    public int getAnoExperiencia() {
+        return anoExperiencia;
+    }
+    public String verDetalle(){
+        return ("Datos de empleados: " + nombre + cargo + salarioBase + anoExperiencia);
+    }
+    public String trabajar(int horas){
+        return ("El empleado "+ nombre + " trabajo " + horas + "horas ");
+    }
+    public String tomarDescando(){
+        return("El empleado llamado " + nombre + " tomo un descanso");
+    }
+    
+    public double calcularBono(float porcentaje){
+        return (salarioBase*porcentaje);
+    }
+    public String calcularBono(int porcentaje){
+        double totalBono = salarioBase*porcentaje;
+        return ("El empleado " + nombre + " tiene un salario + bono total de " + totalBono);
+    }
+    public double calcularSalarioTotal(double bono, int diasTrabajados){
+            return((salarioBase/30)*diasTrabajados);
+    }
+    
+}
+
+NAREN JOSUE DIMATE TORRES
+CAMILO ANDRES PAEZ DIAZ  
