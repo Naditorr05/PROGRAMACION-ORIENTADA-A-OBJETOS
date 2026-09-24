@@ -1,9 +1,5 @@
 package com.mycompany.retroalimentacion.parcial1;
 
-/**
- *
- * @author prestamo
- */
 public class Empleado {
     
     private String nombre;
@@ -18,29 +14,42 @@ public class Empleado {
         this.salarioBase = salarioBase;
         this.anosExperiencia = anosExperiencia;
     }
-    public Empleado (String nombre){
-        this.nombre = nombre;
+    public Empleado (){
     }
-    
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    
-    public String getCargo(){
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCargo() {
         return cargo;
     }
-    
-    public double getSalarioBase(){
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public double getSalarioBase() {
         return salarioBase;
     }
-    
-    public int getAnosExperiencia(){
-        return anosExperiencia;
-    }
-    
-    public void setSalarioBase(int salarioBase){
+
+    public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
+
+    public int getAnosExperiencia() {
+        return anosExperiencia;
+    }
+
+    public void setAnosExperiencia(int anosExperiencia) {
+        this.anosExperiencia = anosExperiencia;
+    }
+    
+   
     
     public String verDetalle(){
         return "El empleado se llama "+this.nombre+" su cargo es "+this.cargo+ " su salario base es "+this.salarioBase+
@@ -61,5 +70,20 @@ public class Empleado {
         return traba + descan;
         
     }
+    
+    public double calcularBono (float porcentaje){
+        return salarioBase*porcentaje/100;
+    }
+    
+    public double calcularBono (int porcentaje){
+        return salarioBase*porcentaje/100;
+    }
+    
+    public double calcularSalarioTotal(double bono, int diasTrabajados){
+        double salarioPorDia = this.salarioBase/30;
+        double salarioTrabajado = salarioPorDia*diasTrabajados;
+        return this.calcularBono(diasTrabajados) + salarioTrabajado;
+    }
+
     
 }
